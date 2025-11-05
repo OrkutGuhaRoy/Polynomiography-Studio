@@ -21,7 +21,7 @@ st.sidebar.markdown("---")
 # Dynamic function list + palette control
 # -------------------------
 if "functions" not in st.session_state:
-    st.session_state.functions = ["z**3 - 1"]
+    st.session_state.functions = ["z**3 + 1"]
 if "palettes" not in st.session_state:
     st.session_state.palettes = ["viridis"]
 
@@ -94,7 +94,7 @@ else:
     st.session_state.palettes = pals
 
     if st.sidebar.button("➕ Add function", key="add_func"):
-        st.session_state.functions.append("z**3 - 1")
+        st.session_state.functions.append("z**3 + 1")
         st.session_state.palettes.append("viridis")
         st.rerun()
 
